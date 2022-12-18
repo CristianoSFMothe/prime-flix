@@ -1,0 +1,17 @@
+.tag-genre {
+  margin: 8px 0 18px 0;
+  display: flex;
+  max-width: 800px;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row
+}
+
+.tag-genre li{
+  list-style: none;
+  font-size: 18px;
+  padding: 5px;
+  display: block;
+}

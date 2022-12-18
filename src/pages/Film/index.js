@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../../services/api';
 import './filme-info.css';
+import {TAG} from "../../components/Tag";
 
 
 function Filme() {
@@ -54,18 +55,17 @@ function Filme() {
       />
       <div className='tags'>
         <strong id='tagline'>{filme.tagline}</strong>
-        {filme.genres.map((genre) => {
-
-          <ul key={id}>
-            <li>{genre.name}</li>
-          </ul>
-          console.log('genero', genre.name)
-        })}
       </div>
+
       <hr />
 
       <h3 id='sinopse'>Sinopse</h3>
       <span id='description-sinopse'>{filme.overview}</span>
+
+      <div className='details-genre'>
+        {filme.genres.map((item)=>{return <TAG key={item.id} name={item.name} /> })}
+      </div>
+
 
       <div id='release_date' className='release_date'>
         <h4 >Data de lançamento</h4>
@@ -73,6 +73,16 @@ function Filme() {
       </div>
 
       <strong id='avaliation'>Avaliação: {filme.vote_average} / 10</strong>
+
+      <div className='area-buttons'>
+        <button className='btn-save' type='button'>Salvar</button>
+        <button className='btn-trailer' type='button'>
+          <a href='#'>
+            Trailer
+          </a>
+        </button>
+
+      </div>
 
     </div>
   );
