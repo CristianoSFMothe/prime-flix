@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import api from '../../services/api';
 import './home.css';
 
@@ -7,6 +7,7 @@ import './home.css';
 
 function Home() {
   const [films, setFilms] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadFilms() {
@@ -17,8 +18,8 @@ function Home() {
         }
       });
 
-      console.log('response', response.data.results.slice(0,10));
       setFilms(response.data.results.slice(0, 10));
+      setLoading(false);
 
     }
 
@@ -26,23 +27,31 @@ function Home() {
 
   }, []);
 
- return(
-   <div className='container'>
-     <div className='list-films'>
-       {films.map((filme) => {
-         return(
-           <article key={filme.id}>
-             <strong>{filme.title}</strong>
-             <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
-             <Link to={`/filme/${filme.id}`}>Acessar</Link>
-           </article>
-           );
-       })}
+  if (loading) {
+    return (
 
-     </div>
+      <div className='loading'></div>
 
-   </div>
- )
+    );
+  }
+
+  return (
+    <div className='container'>
+      <div className='list-films'>
+        {films.map((filme) => {
+          return (
+            <article key={filme.id}>
+              <strong>{filme.title}</strong>
+              <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
+              <Link to={`/filme/${filme.id}`}>Acessar</Link>
+            </article>
+          );
+        })}
+
+      </div>
+
+    </div>
+  )
 }
 
 export default Home;

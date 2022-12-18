@@ -3,6 +3,26 @@
   margin: 14px auto;
 }
 
+
+.loading {
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  margin-top: 14px;
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-top-color: #51D4DB;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 .list-item article {
   width: 100%;
   background-color: #FFF;
