@@ -1,0 +1,50 @@
+.film-details {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  padding: 0 8px;
+}
+
+.film-details h1 {
+  margin: 14px 0;
+  text-align: center;
+}
+
+.film-details img {
+  border-radius: 8px;
+  width: 800px;
+  max-width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.film-details .tags {
+  margin-top: 7px;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+.film-details h3 {
+  margin-top: 14px;
+}
+
+.release_date {
+  display: flex;
+  align-items: flex-start;
+  align-content: start;
+  justify-content: space-around;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.release_date span {
+
+}
+
+.film-details span {
+  margin: 8px 0;
+}

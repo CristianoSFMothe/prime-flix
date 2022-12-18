@@ -71,7 +71,8 @@
 }
 
 .list-films a:hover {
-  transform: scale(1.05);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  /*transform: scale(1.05);*/
+  /*border-top-left-radius: 8px;*/
+  /*border-top-right-radius: 8px;*/
+  background-color: #2e5077;
 }

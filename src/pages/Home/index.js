@@ -14,7 +14,9 @@ function Home() {
       const response = await api.get('movie/now_playing', {
         params: {
           // api_key: process.env.API_KEY,
-          api_key: '7c9d823bb01b90283436e16503b62a08', language: 'pt-BR', page: 1
+          api_key: '7c9d823bb01b90283436e16503b62a08',
+          language: 'pt-BR',
+          page: 1
         }
       });
 
@@ -29,9 +31,7 @@ function Home() {
 
   if (loading) {
     return (
-
       <div className='loading'></div>
-
     );
   }
 
