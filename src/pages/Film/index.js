@@ -26,7 +26,8 @@ function Filme() {
 
         })
         .catch(() => {
-          console.log('filme não encontrado')
+          navigate('/', { replace: true});
+          return;
         })
 
     }
@@ -35,8 +36,7 @@ function Filme() {
 
     return() => {
       console.log('Componente foi desmotando')
-      // navigate('/', { replace: true});
-      // return;
+
     }
 
   }, []);
