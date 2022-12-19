@@ -67,7 +67,6 @@
   outline: none;
   padding: 12px 12px 0 0;
   border-radius: 4px;
-  cursor: pointer;
   justify-content: space-between;
   align-items: center;
 }
@@ -79,6 +78,7 @@
   background-color: #0f0c29;
   color: #fff;
   transition: transforn .5s linear;
+  cursor: pointer;
 }
 
 .area-buttons .btn-save:hover {

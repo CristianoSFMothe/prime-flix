@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import './filme-info.css';
 import {TAG} from "../../components/Tag";
@@ -7,6 +7,7 @@ import {TAG} from "../../components/Tag";
 
 function Filme() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [filme, setFilme] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -34,6 +35,8 @@ function Filme() {
 
     return() => {
       console.log('Componente foi desmotando')
+      // navigate('/', { replace: true});
+      // return;
     }
 
   }, []);
@@ -45,7 +48,7 @@ function Filme() {
   }
 
   return (
-    <div className='film-details'>
+    <div id='film-details' className='film-details'>
       <h1 id='title'>{filme.title}</h1>
 
 
@@ -77,7 +80,10 @@ function Filme() {
       <div className='area-buttons'>
         <button className='btn-save' type='button'>Salvar</button>
         <button className='btn-trailer' type='button'>
-          <a href='#'>
+          <a
+            href={`https://youtube.com/results?search_query=${filme.title} Trailer`}
+            target='_blank'
+          >
             Trailer
           </a>
         </button>
