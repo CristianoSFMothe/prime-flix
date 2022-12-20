@@ -39,7 +39,7 @@ function Filme() {
 
     }
 
-  }, []);
+  }, [navigate, id]);
 
   if (loading) {
     return (
@@ -81,8 +81,9 @@ function Filme() {
         <button className='btn-save' type='button'>Salvar</button>
         <button className='btn-trailer' type='button'>
           <a
+            target="_blank"
+            rel="external"
             href={`https://youtube.com/results?search_query=${filme.title} Trailer`}
-            target='_blank'
           >
             Trailer
           </a>
