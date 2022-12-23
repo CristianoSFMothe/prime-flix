@@ -6,7 +6,12 @@
   align-content: flex-start;
   flex-wrap: nowrap;
   align-items: center;
-  flex-direction: row
+  flex-direction: row;
+  color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #0f0c29;
+  transition: transforn .5s linear;
 }
 
 .tag-genre li{
@@ -14,4 +19,8 @@
   font-size: 18px;
   padding: 5px;
   display: block;
+}
+
+.tag-genre:hover{
+  background: #45416E;
 }

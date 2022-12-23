@@ -79,8 +79,9 @@ function Filme() {
 
       <div className='area-buttons'>
         <button className='btn-save' type='button'>Salvar</button>
-        <button className='btn-trailer' type='button'>
-          <a
+
+        <button>
+          <a className='btn-trailer'
             target="_blank"
             rel="external"
             href={`https://youtube.com/results?search_query=${filme.title} Trailer`}
