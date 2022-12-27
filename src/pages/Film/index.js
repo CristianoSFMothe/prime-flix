@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import './filme-info.css';
-import {TAG} from "../../components/Tag";
+import {TAG} from '../../components/Tag';
+import { toast } from 'react-toastify';
 
 
 function Filme() {
@@ -49,7 +50,7 @@ function Filme() {
     const hasFilm = savedMovies.some((savedMovies) => savedMovies.id === filme.id);
 
     if (hasFilm) {
-      alert('Esse filme já existe na lista');
+      toast.warn('Esse filme já está na lista!')
       return;
     }
 
@@ -57,7 +58,7 @@ function Filme() {
 
     localStorage.setItem('@primeFlix', JSON.stringify(savedMovies));
 
-    alert('Filme salvo com sucesso!');
+    toast.success('Filme salvo com sucesso!')
   }
 
   if (loading) {
