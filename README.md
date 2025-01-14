@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Prime Flix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prime Flix é uma aplicação web desenvolvida com **React** que permite aos usuários explorar filmes utilizando a **API do TMDB** (The Movie Database). A aplicação oferece funcionalidades para salvar filmes favoritos no `localStorage`, visualizar detalhes sobre o filme e assistir aos trailers diretamente no YouTube.
 
-## Available Scripts
+![image](https://github.com/user-attachments/assets/0a0e1d97-907a-4171-a05c-ba3a3cdc5723)
 
-In the project directory, you can run:
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔍 **Pesquisa de Filmes**: Permite pesquisar filmes pelo nome usando a API do TMDB.
+- ❤️ **Favoritos**: Marque filmes como favoritos e salve-os no `localStorage`. Na tela de favoritos, você poderá visualizar uma descrição do filme e assistir ao trailer no YouTube.
+- 🎥 **Visualização de Trailer**: Ao acessar a lista de favoritos, é possível assistir ao trailer do filme diretamente no YouTube.
+- 📱 **Interface Responsiva**: Design otimizado para dispositivos móveis e desktop.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias Utilizadas
 
-### `npm test`
+- **React**: Biblioteca JavaScript para construção da interface.
+- **TMDB API**: API para buscar informações sobre filmes.
+- **localStorage**: Armazenamento local para salvar filmes favoritos.
+- **YouTube API**: Exibição de trailers diretamente no YouTube.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funcionalidades Futuras
 
-### `npm run build`
+- 🔎 **Campo de Pesquisa de Filme pelo Nome**: Implementação de um campo de pesquisa para encontrar filmes pelo nome.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como Rodar o Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone este repositório:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/CristianoSFMothe/prime-flix.git
+   ```
 
-### `npm run eject`
+2. Instale as dependências:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Inicie o servidor de desenvolvimento:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Abra o navegador e acesse:
 
-## Learn More
+   ```
+   http://localhost:3000
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Estrutura de Diretórios
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+prime-flix/
+├── public/
+├── src/
+│   ├── components/  # Componentes reutilizáveis
+│   ├── pages/       # Páginas principais da aplicação
+│   ├── services/    # Funções para interação com a API do TMDB
+│   └── App.js       # Componente principal
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-### Code Splitting
+## Contribuindo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Se você quiser contribuir para o projeto, fique à vontade para abrir issues ou pull requests. Toda contribuição é bem-vinda!
 
-### Analyzing the Bundle Size
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Distribuído sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais informações.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### O que foi adicionado:
+1. **Funcionalidades atualizadas**: Agora inclui a possibilidade de visualizar a descrição do filme e assistir ao trailer no YouTube na tela de favoritos.
+2. **Campo de pesquisa**: A funcionalidade para pesquisar filmes pelo nome foi mencionada como algo a ser implementado em breve.
+3. **Ícones**: Os ícones foram incluídos nos tópicos para tornar o `README` mais visualmente atraente.
+  
+Esse modelo deve estar bem alinhado com as atualizações do seu projeto!
