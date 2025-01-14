@@ -1,0 +1,50 @@
+.not-found {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.not-found h1 {
+  font-size: 120px;
+}
+
+.not-found a {
+  text-decoration: none;
+  background-color: #116FEB;
+  color: #FFF;
+  padding: 10px;
+  margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .not-found h1 {
+    font-size: 80px;
+  }
+
+  .not-found h2 {
+    font-size: 20px;
+  }
+
+  .not-found a {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found h1 {
+    font-size: 60px;
+  }
+
+  .not-found h2 {
+    font-size: 18px;
+  }
+
+  .not-found a {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
